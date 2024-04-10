@@ -1,6 +1,6 @@
 <template>
     <nav class="container">
-        <img src="/dc-logo.png" alt="">
+        <img id="logo" src="/dc-logo.png" alt="">
         <div>
             <ul class="main-menu">
                 <li v-for="(link, index) in menu" :key="index"><a href=""> {{link.name}} </a></li>
@@ -64,6 +64,10 @@ export default {
 
 <style lang="scss">
 @import '../assets/style/main.scss';
+
+#logo {
+    width: 70px;
+}
 
 .container {
     @include container($container: 1000px);
