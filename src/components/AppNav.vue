@@ -67,6 +67,8 @@ export default {
 
 #logo {
     width: 70px;
+    vertical-align: middle;
+    padding: 10px;
 }
 
 .container {
@@ -78,7 +80,10 @@ export default {
         @include text-uppercase($text-uppercase: rgb(0, 0, 0));
         @extend %flex-align-center;
         gap: 20px;
-        font-family: "Antonio", sans-serif; ;
+        font-family: "Antonio", sans-serif; 
+        vertical-align: middle;
+        margin: 0;
+       
 
     }
 }

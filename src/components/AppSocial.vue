@@ -36,6 +36,9 @@ export default {
     @extend %flex-align-center;
     justify-content: space-between;
     height: 100px;
+    img {
+    padding-left: 10px;
+    }
 
 }
 </style>
