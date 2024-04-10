@@ -59,11 +59,11 @@ export default {
 
     ul {
         @extend %flex-align-center;
-        list-style: none;
+        @include text-uppercase($text-uppercase:white);
         gap: 20px;
-        color: white;
         justify-items: center;
         padding: 30px;
+        margin: auto;
 
         img {
             width: 40px;

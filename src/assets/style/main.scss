@@ -10,14 +10,37 @@ $fa-font-path: '../fonts/webfonts';
 @import 'bootstrap/scss/bootstrap';
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap');
+
 
 @mixin container($container) {
     width: $container;
     margin: 0, auto;
   }
+
+  @mixin text-uppercase($text-uppercase) {
+    color: $text-uppercase;
+    text-transform: uppercase;
+  }
+  
   
 %flex-align-center {
     display: flex;
     align-items: center;
+  }
+
+  %menu-footer {
+    color: white;
+    line-height: 10px;
+    font-size: 9px;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  ul{
+    list-style: none;
   }
   

@@ -1,8 +1,8 @@
 <template>
-    <div>
+    <div class="bg">
         <div class="container">
             <div class="list">
-                <ul v-for="(link, index) in dcComics" :Key="index"><a href="">{{ link.name }}</a></ul>
+                <ul v-for="(link, index) in dcComics" :Key="index" class="dcComics"><a href="">{{ link.name }}</a></ul>
                 <ul></ul>
                 <ul></ul>
             </div>
@@ -66,16 +66,16 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/style/main.scss';
 
-div {
+.bg {
     background-image: url("/footer-bg.jpg");
-
-    .container {
+ 
+}
+.container {
         @include container($container: 1000px);
        
     }
-
-    .list {
-            @extend %flex-align-center;
-        }
+.dcComics {
+    @include  text-uppercase($white);
+   @extend menu-footer !optional;
 }
 </style>

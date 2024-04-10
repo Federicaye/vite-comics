@@ -2,7 +2,7 @@
     <nav class="container">
         <img src="/dc-logo.png" alt="">
         <div>
-            <ul>
+            <ul class="main-menu">
                 <li v-for="(link, index) in menu" :key="index"><a href=""> {{link.name}} </a></li>
             </ul>
 
@@ -70,10 +70,11 @@ export default {
     @extend %flex-align-center;
     justify-content: space-between;
     
-    ul {
+    .main-menu {
+        @include text-uppercase($text-uppercase: rgb(0, 0, 0));
         @extend %flex-align-center;
-        list-style: none;
         gap: 20px;
+        font-family: "Antonio", sans-serif; ;
 
     }
 }
