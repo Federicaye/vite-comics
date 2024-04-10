@@ -2,9 +2,9 @@
     <div class="bg">
         <div class="container">
             <div class="list">
-                <ul v-for="(link, index) in dcComics" :Key="index" class="dcComics"><a href="">{{ link.name }}</a></ul>
-                <ul></ul>
-                <ul></ul>
+               <ul> <li v-for="(link, index) in dcComics" :Key="index" class="dcComics"><a href="">{{ link.name }}</a></li></ul>
+               <ul> <li v-for="(link, index) in dcComics" :Key="index" class="dcComics"><a href="">{{ link.name }}</a></li></ul>
+               <ul> <li v-for="(link, index) in dcComics" :Key="index" class="dcComics"><a href="">{{ link.name }}</a></li></ul>
             </div>
         </div>
     </div>
@@ -63,7 +63,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import '../assets/style/main.scss';
 
 .bg {
@@ -74,8 +74,10 @@ export default {
         @include container($container: 1000px);
        
     }
-.dcComics {
-    @include  text-uppercase($white);
-   @extend menu-footer !optional;
+
+.list {
+    color: white;
+    display: flex;
 }
 </style>
+

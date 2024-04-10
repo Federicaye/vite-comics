@@ -2,7 +2,7 @@
     <div class="black">
 
         <div class="container">
-            <ul>
+            <ul class="shop-menu">
                 <li v-for="(link, index) in menu" :key="index">
                     <img :src="link.img" :alt="link.text">{{ link.text }}
                 </li>
@@ -57,7 +57,7 @@ export default {
 .container {
     @include container($container: 1000px);
 
-    ul {
+    .shop-menu {
         @extend %flex-align-center;
         @include text-uppercase($text-uppercase:white);
         gap: 20px;

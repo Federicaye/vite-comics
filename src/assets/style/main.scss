@@ -15,7 +15,7 @@ $fa-font-path: '../fonts/webfonts';
 
 @mixin container($container) {
     width: $container;
-    margin: 0, auto;
+    margin: auto;
   }
 
   @mixin text-uppercase($text-uppercase) {

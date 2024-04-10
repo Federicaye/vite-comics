@@ -5,6 +5,7 @@
     <AppMain/>
     <AppNavShop/>
     <AppFooter/>
+    <AppSocial/>
   </div>
 </template>
 
@@ -13,13 +14,15 @@ import AppNav from './components/AppNav.vue';
 import AppMain from './components/AppMain.vue';
 import AppFooter from './components/AppFooter.vue';
 import AppNavShop from './components/AppNavShop.vue';
+import AppSocial from './components/AppSocial.vue';
 export default {
   name: 'App',
   components: {
     AppNav,
     AppMain,
     AppFooter,
-    AppNavShop
+    AppNavShop,
+    AppSocial
   }
 }
 </script>
