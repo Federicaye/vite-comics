@@ -75,9 +75,50 @@ const comics= [
   
   export {comics};
   
+  const footerMenu =  [
+    {
+        name: 'Character',
+        url: '#'
+    },
+    {
+        name: 'Comics',
+        url: '#'
+    },
+    {
+        name: 'Movies',
+        url: '#'
+    },
+    {
+        name: 'TV',
+        url: '#'
+    },
+    {
+        name: 'Games',
+        url: '#'
+    },
+    {
+        name: 'Collectibles',
+        url: '#'
+    },
+    {
+        name: 'Videos',
+        url: '#'
+    },
+    {
+        name: 'Fans',
+        url: '#'
+    },
+    {
+        name: 'News',
+        url: '#'
+    },
+    {
+        name: 'Shop',
+        url: '#'
+    }
+]
   
-  
-  
+export {footerMenu};
   
   
   

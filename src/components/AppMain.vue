@@ -1,7 +1,9 @@
 <template>
     <div class="cards">
-        <div v-for="(item, index) in comics" :key="index" class="card">
-            <AppCard :price="item.price" :title="item.series" :type="item.type" :img="item.thumb" />
+        <div class="shop">
+            <div v-for="(item, index) in comics" :key="index" class="cardComic">
+                <AppCard :price="item.price" :title="item.series" :type="item.type" :img="item.thumb" />
+            </div>
         </div>
     </div>
 </template>
@@ -26,13 +28,19 @@ export default {
 @import '../assets/style/main.scss';
 
 .cards {
-    @extend %flex-align-center;
+   
     background-color: rgb(0, 0, 0);
-    flex-wrap: wrap;
-    
 }
-
-.card {
+.shop {
+    @include container($container: 1200px);
+    @extend %flex-align-center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+.cardComic {
     width: calc(100% / 6);
+    color: white;
+    height: 400px;
 }
 </style>

@@ -1,8 +1,9 @@
 <template>
     <div :class="type">
-        <img :src="img" :alt="title">
-        <h5> <a href=""> {{ title }} </a></h5>
-        <p>{{ price }}</p>
+        <div class="coverComic"> <img :src="img" :alt="title">
+            <h5> <a href=""> {{ title }} </a></h5>
+            <p>{{ price }}</p>
+        </div>
     </div>
 </template>
 
@@ -14,7 +15,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.coverComic {
+    width: 200px;
+    height: 300px;
+}
+
 img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+
 }
 </style>
