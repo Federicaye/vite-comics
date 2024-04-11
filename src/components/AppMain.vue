@@ -1,8 +1,9 @@
 <template>
     <div class="cards">
         <div class="shop">
-            <div v-for="(item, index) in comics" :key="index" class="cardComic">
-                <AppCard :price="item.price" :title="item.series" :type="item.type" :img="item.thumb" />
+            <div v-for="(item, index) in comics" :key="index" class="cardComic" :class="{ 'borderWhite': item.mouseover }">
+                <AppCard :price="item.price" :title="item.series" :type="item.type" :img="item.thumb"
+                    @highlight="highlighting(index)" />
             </div>
         </div>
     </div>
@@ -19,6 +20,12 @@ export default {
     data() {
         return {
             comics,
+        
+        }
+    },
+    methods: {
+        highlighting(index) {
+            this.item[index].mouseover = !this.item[index].mouseover
         }
     }
 }
@@ -28,9 +35,10 @@ export default {
 @import '../assets/style/main.scss';
 
 .cards {
-   
+
     background-color: rgb(0, 0, 0);
 }
+
 .shop {
     @include container($container: 1200px);
     @extend %flex-align-center;
@@ -38,9 +46,16 @@ export default {
     justify-content: space-between;
     gap: 10px;
 }
+
 .cardComic {
     width: calc(100% / 6);
     color: white;
     height: 400px;
+}
+
+.borderWhite {
+    border: 5px, solid, white;
+
+
 }
 </style>
