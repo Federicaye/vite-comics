@@ -67,7 +67,7 @@ export default {
 
         img {
             width: 40px;
-            padding-left: 5px;
+            padding-right: 7px;
         }
 
     }
